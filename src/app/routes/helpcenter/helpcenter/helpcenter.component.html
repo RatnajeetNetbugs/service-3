@@ -1,0 +1,466 @@
+<div class="help-container" style="margin-top: 100px">
+  <!-- Search Section -->
+  <div class="help-search">
+    <h2 style="text-align: center">
+      "Search for help articles, guides, and solutions."
+    </h2>
+
+    <div class="search-box">
+      <input type="text" placeholder="Type your query here…" />
+    </div>
+    <p
+      style="font-size: 12px; text-align: center; color: gray; margin-top: 5px"
+    >
+      Search for help articles, guides, and solutions.
+    </p>
+  </div>
+
+  <!-- Help Center Text -->
+  <!-- <div class="help-center-text" style="margin-top: 20px">
+    <h3 style="font-weight: bold; text-align: center">1. Introduction</h3>
+    <p style="text-align: left; padding-left: 100px; padding-right: 100px">
+      Welcome to the Biznfc Help Center! Here, you'll find resources to help you
+      make the most of your Biznfc experience. Browse topics, search for
+      solutions, or reach out for personalized assistance.
+    </p>
+
+    <h3 style="font-weight: bold; margin-top: 20px; text-align: center">
+      2. Common Help Topics
+    </h3>
+    <p style="text-align: left; padding-left: 100px">
+      <strong>Account Management:</strong> Creating, updating, and deleting your
+      Biznfc account. <br />
+      <strong>Digital Business Cards:</strong> Setting up, customizing, and
+      sharing digital cards. <br />
+      <strong>Scanning Business Cards:</strong> Using Biznfc AI to scan and
+      extract business card details. <br />
+      <strong>Analytics & Insights:</strong> Tracking interactions, views, and
+      engagement. <br />
+      <strong>Forms & Feedback:</strong> Creating and analyzing feedback and
+      review forms. <br />
+      <strong>Custom Branding:</strong> Designing and personalizing your digital
+      cards. <br />
+      <strong>Pricing & Subscription:</strong> Understanding pricing plans and
+      payment methods. <br />
+      <strong>Affiliate Program:</strong> How to join, use codes, and track
+      earnings. <br />
+      <strong>Devices & Compatibility:</strong> NFC cards, QR codes, and
+      compatible devices. <br />
+      <strong>Security & Privacy:</strong> Data protection and user privacy
+      policies.
+    </p>
+
+    <h3 style="font-weight: bold; margin-top: 20px; text-align: center">
+      3. Get Support
+    </h3>
+    <p style="text-align: left; padding-left: 100px">
+      <strong>FAQs:</strong> Quick answers to frequently asked questions. <br />
+      <strong>Contact Us:</strong> Reach out via email or chat for personalized
+      assistance. <br />
+      <strong>Video Tutorials:</strong> Step-by-step video guides for key
+      features. <br />
+      <strong>Community Forum:</strong> Connect with other Biznfc users for tips
+      and advice.
+    </p>
+  </div> -->
+  <div class="container py-5" [ngClass]="selectedTheme">
+    <h2 class="text-center mb-4">Knowledge Base</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body" [ngClass]="selectedTheme">
+            <h5 class="card-title">
+              <i class="bi bi-info-circle me-2"></i>Getting Started with Biznfc
+            </h5>
+            <ul>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                How to Create a Biznfc Account
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Setting Up Your First Digital Business Card
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Navigating the Biznfc Dashboard
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Understanding the Free, Essential, and Pro Plus Plans
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Adding a Profile Picture, Logo, and Cover Images
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Introduction to NFC and QR Technology
+                <i class="bi bi-chevron-right"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body" [ngClass]="selectedTheme">
+            <h5 class="card-title">
+              <i class="bi bi-palette me-2"></i>Digital Business Card
+              Customization
+            </h5>
+            <ul>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Adding and Managing 80+ Social & Business Links
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Personalizing Themes and Layouts
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Uploading PDFs, YouTube Videos, and Galleries
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Creating Contact Exchange Forms
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Embedding Locations and Maps
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Utilizing Custom Branding for Your BizConnect+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body" [ngClass]="selectedTheme">
+            <h5 class="card-title">
+              <i class="bi bi-tools me-2"></i>Using Biznfc Features Effectively
+            </h5>
+            <ul>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Creating and Sharing QR Codes
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Using the Networking Feature to Connect
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Making Business Websites for Restaurants, Hotels, and NGOs
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Building Virtual Event Cards (Zoom Backgrounds, Email
+                Signatures)
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Scanning Business Cards with Biznfc AI
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Exploring EcoConnect, ReviewBoost, and TapSocial Cards
+                <i class="bi bi-chevron-right"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body" [ngClass]="selectedTheme">
+            <h5 class="card-title">
+              <i class="bi bi-tools me-2"></i> Form and Feedback Management
+            </h5>
+            <ul>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Creating Contact and Lead Capture Forms
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Building and Analyzing Feedback Forms
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Designing Feedback with Emojis and Multiple-Choice Questions
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Using the Smart Review Creator for Ratings
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Analyzing NPS Scores and Review Data
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Exporting Form Responses and Feedback
+                <i class="bi bi-chevron-right"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body" [ngClass]="selectedTheme">
+            <h5 class="card-title">
+              <i class="bi bi-tools me-2"></i> Tracking and Analytics
+            </h5>
+            <ul>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Understanding Analytics for Card Views, Form Views, and Feedback
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Monitoring Engagement with Real-Time Insights
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Identifying Traffic Sources for Your Digital Card
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+              >
+                Analyzing Lead Capture Data for Business Growth
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Exporting Analytics Reports for Evaluation
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Utilizing Analytics for Marketing Strategy
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body" [ngClass]="selectedTheme">
+            <h5 class="card-title">
+              <i class="bi bi-tools me-2"></i> Account Management and Support
+            </h5>
+            <ul>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Managing Your Subscription Plan and Renewal
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Adding, Editing, or Deleting Digital Business Cards
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Updating Account Information and Profile Settings
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Understanding Bizcoins for Rewards
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Accessing the Affiliate Program and Tracking Sales
+
+                <i class="bi bi-chevron-right"></i>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center py-2"
+                style="padding: 10px 0"
+              >
+                Contacting Biznfc Support for Assistance
+                <i class="bi bi-chevron-right"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Keep Learning</h2>
+
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div
+          class="cards shadow-sm text-center"
+          style="background-color: transparent; border: 2px solid gray"
+        >
+          <div class="card-body">
+            <h5 class="card-title mb-3">Blogs</h5>
+            <p class="card-text">
+              Explore insightful articles on digital networking, personal
+              branding, and maximizing the potential of Biznfc products. Stay
+              updated with industry trends and best practices.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div
+          class="cards shadow-sm text-center"
+          style="background-color: transparent; border: 2px solid gray"
+        >
+          <div class="card-body">
+            <h5 class="card-title mb-3">Inspiration Center</h5>
+            <p class="card-text">
+              Discover creative ways to use your Biznfc digital business cards,
+              read success stories from users, and find inspiration to elevate
+              your networking game.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div
+          class="cards shadow-sm text-center"
+          style="background-color: transparent; border: 2px solid gray"
+        >
+          <div class="card-body">
+            <h5 class="card-title mb-3">Community</h5>
+            <p class="card-text">
+              Connect with other Biznfc users, share experiences, ask questions,
+              and learn from a community of professionals using smart
+              networking solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

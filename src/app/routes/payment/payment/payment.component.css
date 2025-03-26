@@ -1,0 +1,259 @@
+/* ===== Global Styling ===== */
+:root {
+  --text-color: #ffffff; /* Default light mode text */
+  --text-secondary: rgba(255, 255, 255, 0.9); /* Reduce transparency */
+  --border-color: rgba(200, 200, 200, 0.9); /* Light grey border */
+}
+
+/* Light Mode Variables */
+.light-theme {
+  --text-color: #000000;
+  --text-secondary: rgba(0, 0, 0, 0.8);
+  --border-color: rgba(
+    100,
+    100,
+    100,
+    0.6
+  ); /* Darker gray for better visibility */
+}
+
+/* Dark Mode Variables */
+.dark-theme {
+  --text-color: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --border-color: gray; /* Soft white border */
+}
+
+/* ===== Font Fix for Blur Issue ===== */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Checkout Container ===== */
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Checkout Box */
+.checkout-box {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+}
+
+/* ===== Fix Blurry Headings ===== */
+h2,
+h3 {
+  font-weight: bold;
+  color: var(--text-color);
+  text-shadow: none;
+  font-size: 22px;
+}
+
+/* Labels */
+.input-group label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ===== Input Fields (With Proper Borders) ===== */
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+}
+
+/* Fix Placeholder Blur */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  font-size: 15px;
+}
+
+/* ===== Fix for Promo Code Section ===== */
+.promo-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+}
+
+.promo-input-container input {
+  color: var(--text-color);
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid gray;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Apply Button */
+.btn-apply {
+  background: #685dd8;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-apply:hover {
+  background: #8a2be2;
+}
+
+/* ===== Fix for Buy Now Button (Sharp Text) ===== */
+.buy-now {
+  background: #685dd8;
+  color: white !important;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.buy-now:hover {
+  background: #8a2be2;
+}
+
+/* ===== Fix Dark Mode Issues ===== */
+.dark-theme .checkout-box {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dark-theme .input-group input,
+.dark-theme .input-group textarea {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Fix Blurry Price Details ===== */
+.price-details p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* ===== Responsive Fixes for Small Devices ===== */
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .checkout-box {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Fix input & button sizes */
+  .promo-input-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .promo-input-container input {
+    width: 100%;
+  }
+
+  .btn-apply {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Fix heading sizes */
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  /* Ensure buttons are readable */
+  .buy-now {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .price-details p {
+    font-size: 14px;
+  }
+}
+.payment-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.payment-image {
+  max-width: 100%;
+  height: auto;
+}
+.product-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.product-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-icon:hover {
+  transform: scale(1.1);
+  border-color: #fa8900;
+}

@@ -1,0 +1,96 @@
+.faq-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent Effect */
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.faq-image img {
+  height: 1200px;
+  width: 500px;
+  object-fit: cover;
+}
+
+.faq-list {
+  width: 50%;
+}
+
+.faq-item {
+  padding: 12px; /* Reduced padding for a more compact look */
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  justify-content: flex-start; /* Aligns content to the left */
+
+  transition: background 0.3s, box-shadow 0.3s;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.faq-toggle {
+  margin-left: auto; /* Ensures the icon stays at the right */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* .faq-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+} */
+
+.faq-question {
+  display: flex;
+  text-align: left; /* Ensures text starts from the left */
+  justify-content: space-between; /* Pushes the icon to the right */
+
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.faq-answer {
+  margin-top: 6px;
+  font-size: 14px;
+  text-align: left; /* Ensures text starts from the left */
+
+  padding: 8px;
+  color: var(--text-primary); /* Ensures visibility in light and dark themes */
+  background: rgba(255, 255, 255, 0.1); /* Slight background for contrast */
+  border-radius: 6px;
+}
+
+/* Rotation for expand/collapse icon */
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Light Theme Fix */
+.light-theme .faq-answer {
+  color: #333; /* Dark text for better readability */
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .faq-container {
+    flex-direction: column;
+  }
+  .faq-image img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  .faq-list {
+    width: 100%;
+  }
+}

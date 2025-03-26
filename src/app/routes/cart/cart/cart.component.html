@@ -1,0 +1,51 @@
+<div class="cart-container" [ngClass]="selectedTheme" [class.open]="isCartOpen">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-btn" (click)="toggleCart()">✖</button>
+  </div>
+
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <ul class="cart-list">
+      <li *ngFor="let item of cartItems; let i = index">
+        <div class="cart-item">
+          <div class="cart-item-info">
+            <button class="remove-btn" (click)="removeItem(i)">
+              <i class="bi bi-trash"></i>
+            </button>
+            <div class="cart-item-details">
+              <span class="item-name">{{ item.name }}</span>
+              <span class="item-quantity">
+                {{ item.quantity }} × <strong>₹{{ item.price }}</strong>
+              </span>
+            </div>
+          </div>
+
+          <img
+            [src]="item.imageUrl"
+            alt="{{ item.name }}"
+            class="cart-item-img"
+          />
+        </div>
+      </li>
+    </ul>
+
+    <hr class="cart-divider" />
+
+    <div class="cart-summary">
+      <span class="subtotal-label">Subtotal:</span>
+      <span class="subtotal-amount">₹{{ getSubtotal() }}</span>
+    </div>
+
+    <button
+      class="checkout-btn"
+      (click)="toggleCart()"
+      [routerLink]="'checkout'"
+    >
+      <i class="bi bi-lock"></i> Checkout
+    </button>
+  </div>
+
+  <ng-template #emptyCart>
+    <p class="empty-text">Your cart is empty.</p>
+  </ng-template>
+</div>

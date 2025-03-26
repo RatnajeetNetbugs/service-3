@@ -1,0 +1,31 @@
+<div class="faq-section" style="margin-top: 100px">
+  <h2>Frequently asked <strong>questions</strong></h2>
+  <p>Browse through these FAQs to find answers to commonly asked questions.</p>
+
+  <div class="faq-container">
+    <div class="faq-image">
+      <img src="img/hero-bg.jpg" alt="FAQ Illustration" />
+    </div>
+
+    <div class="faq-list">
+      <div *ngFor="let faq of faqs; let i = index" class="text dark mt-3">
+        <!-- Add Titles Dynamically Based on Index -->
+        <h4 *ngIf="i === 0">General FAQs</h4>
+        <h4 *ngIf="i === 3">Product-Specific FAQs</h4>
+        <h4 *ngIf="i === 6">Pricing and Plans FAQs:</h4>
+        <h4 *ngIf="i === 9">Technical and Compatibility FAQs:</h4>
+        <h4 *ngIf="i === 12">Analytics and Data FAQs:</h4>
+        <h4 *ngIf="i === 15">Order and Shipping FAQs:</h4>
+        <h4 *ngIf="i === 18">Support and Assistance FAQs:</h4>
+
+        <div class="faq-item" (click)="toggleFAQ(faq)">
+          <div class="faq-question">
+            <h5>{{ faq.question }}</h5>
+            <span [class.rotate]="faq.open">&#9660;</span>
+          </div>
+          <p *ngIf="faq.open" class="faq-answer">{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

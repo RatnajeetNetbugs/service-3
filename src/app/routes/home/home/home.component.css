@@ -1,0 +1,85 @@
+/* Base product card styling */
+.theme-card {
+  background-color: rgba(255, 255, 255, 0.05); /* Light transparent */
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Light border */
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px); /* Blur effect */
+  text-align: center;
+  color: var(--text-color); /* Adapt to theme */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+}
+
+/* Active product card (when selected or focused) */
+.theme-card.active {
+  border-color: var(--primary-color); /* Highlighted border color */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2); /* Light blue shadow */
+}
+
+/* Icon style inside the product card */
+.theme-card .icon {
+  font-size: 40px;
+  color: var(--primary-color); /* Adjust icon color based on theme */
+}
+
+/* Product image container to maintain shape */
+.theme-card img {
+  height: 179px !important;
+  width: 100% !important;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border around image */
+}
+
+/* Button styling (for Add to Cart, Buy Now, etc.) */
+.btn-violet {
+  background-color: #675cd6; /* Violet background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 12px 30px; /* Larger padding for bigger button */
+  font-size: 16px; /* Adjust font size */
+  border-radius: 5px; /* Rounded corners */
+  text-transform: uppercase; /* Make the text uppercase */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.btn-violet:hover {
+  background-color: #8a2be2; /* Slightly lighter violet on hover */
+}
+
+/* Dark Theme Adjustments */
+.dark-theme .theme-card {
+  background-color: rgba(0, 0, 0, 0.05); /* Darker transparent background */
+  color: #ddd; /* Light text for dark theme */
+}
+
+/* Optional: Adjusting card shadow in dark theme */
+.dark-theme .theme-card {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .theme-card.active {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* Lighter shadow in dark mode */
+}
+
+/* List styling for product features (if applicable) */
+.theme-card .product-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Transparent background */
+  padding: 10px;
+  border-radius: 5px;
+}
+.top-products-heading {
+  color: var(--text-secondary);
+}

@@ -1,0 +1,225 @@
+:root {
+  --primary-color: #6a5acd;
+  --light-bg: #ffffff;
+  --dark-bg: #1a1a2e;
+  --text-primary: #fff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 Help Page Container */
+.help-container {
+  padding: 50px 20px;
+}
+
+/* 🔹 Search Section */
+.help-search {
+  backdrop-filter: blur(10px);
+
+  border: 2px solid rgba(255, 255, 255, 0.2);
+
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Removed Border, Added Shadow */
+}
+
+.help-search h2 {
+  margin-bottom: 15px;
+}
+
+.search-box {
+  display: flex;
+  align-content: center;
+
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.search-box input {
+  width: 300px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.search-box button {
+  padding: 12px 15px;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 🔹 Popular Articles Section */
+.popular-articles {
+  text-align: center;
+}
+
+.articles-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.article-card {
+  position: relative;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 25px;
+  width: 300px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Removed Border, Added Shadow */
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🔹 Icons */
+.article-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* 🔹 Article Titles & Text */
+.article-card h4 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.article-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* 🔹 Button Styling */
+.btn-light-purple {
+  background: #dcd4ff;
+  color: #6a5acd;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-light-purple:hover {
+  background: #b8aaff;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .article-card {
+    padding: 20px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .btn-light-purple {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+  }
+  .search-box input {
+    width: 100%;
+  }
+  .articles-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .article-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .help-container {
+    padding: 30px 10px;
+  }
+  .article-card {
+    padding: 15px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  .btn-light-purple {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+.btn-readmore {
+  background: #685dd8; /* Deep Purple */
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Hover Effect */
+.btn-readmore:hover {
+  background: #5a00c2; /* Slightly Darker Purple */
+  transform: translateY(-2px); /* Slight Lift Effect */
+}
+/* Default (Light Theme) */
+
+.card {
+  height: 400px;
+}
+.light {
+  background: white;
+  color: black;
+}
+
+/* Dark Theme */
+.dark {
+  background-color: #2f3349;
+  color: white;
+}
+.cards {
+  height: 150px;
+  padding: 10px 10px; /* 10px top & bottom, 20px left & right */
+}
+.card ul li {
+  text-decoration: none;
+}
+.card ul li:hover {
+  color: #685dd8;
+  cursor: pointer;
+}
+.card-text {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: auto;
+  }
+}

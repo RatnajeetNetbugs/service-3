@@ -1,0 +1,266 @@
+.yourPlan {
+  background-color: #cbf2dc;
+}
+.price {
+  font-weight: 600;
+  color: #7367f0;
+}
+
+.pricing-section {
+  text-align: center;
+  padding: 60px 20px;
+
+  backdrop-filter: blur(10px); /* Glassmorphism */
+  border-radius: 12px;
+}
+
+/* Pricing Cards */
+.pricing-card {
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Popular Plan Styling */
+
+.popular-badge {
+  color: #6a0dad;
+  background: #cac4f1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  left: 15px;
+}
+
+/* Titles & Text */
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.pricing-list {
+  list-style: none; /* Remove default bullets */
+  /* padding-left: 10; */
+  text-align: left;
+  margin-top: 20px;
+}
+
+.pricing-list li {
+  display: flex; /* Keep icon and text in one line */
+  align-items: center; /* Align items vertically */
+  gap: 10px; /* Maintain spacing between icon and text */
+  font-size: 14px;
+  padding: 5px 0;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.pricing-list li::before {
+  content: "o"; /* Unicode character for a solid circle */
+  font-size: 16px; /* Adjust bullet size */
+  flex-shrink: 0; /* Prevent the bullet from resizing */
+  width: 20px; /* Set fixed width to align properly */
+  text-align: center; /* Center bullet */
+}
+
+/* Pricing Icons */
+.pricing-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn-success {
+  width: 100%;
+  background: #cbf2dc;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn-light-purple {
+  width: 100%;
+  background: #dddbfb;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn-light-purple:hover {
+  background: #b8aaff;
+  color: #6a0dad;
+}
+.btn-success:hover {
+  background: #7ddda8;
+  color: green;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .pricing-card {
+    padding: 25px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .pricing-list li {
+    font-size: 13px;
+  }
+  .btn-light-purple,
+  .btn-success {
+    font-size: 14px;
+  }
+  .btn-light-purple:hover {
+    background: #b8aaff;
+    color: #6a0dad;
+  }
+  .btn-success:hover {
+    background: #7ddda8;
+    color: green;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 40px 15px;
+  }
+  .pricing-card {
+    padding: 20px;
+    margin-bottom: 20px; /* Add space between stacked cards */
+  }
+  h3 {
+    font-size: 22px;
+  }
+  .pricing-list li {
+    font-size: 12px;
+  }
+  .btn-light-purple,
+  .btn-success {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .btn-light-purple:hover {
+    background: #b8aaff;
+    color: #6a0dad;
+  }
+  .btn-success:hover {
+    background: #7ddda8;
+    color: green;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .pricing-section {
+    padding: 30px 10px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .pricing-list li {
+    font-size: 11px;
+  }
+  .pricing-icon {
+    width: 60px;
+  }
+}
+
+.pricing-header {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.discount-badge {
+  background: #e5d5ff;
+  color: #6a0dad;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ddd;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #6a0dad;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+.popular-badge {
+  position: absolute;
+  top: 15px; /* Adjust from top */
+  left: 15px; /* Move towards left */
+  font-size: 12px; /* Adjust font size */
+  padding: 5px 12px; /* Add some padding */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #c9c6f1; /* Adjust to match your theme */
+  color: #6a0dad;
+}

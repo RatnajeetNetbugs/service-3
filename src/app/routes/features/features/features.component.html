@@ -1,0 +1,18 @@
+<section class="features-section text-center py-5">
+  <span class="badge bg-primary px-3 py-2 mb-3">Useful Features</span>
+  <h2 class="fw-bold">
+    <span>Everything you need to start your next project</span>
+  </h2>
+  <p>
+    Not just a set of tools, the package includes ready-to-deploy conceptual
+    applications.
+  </p>
+
+  <div class="features-grid mt-5">
+    <div class="feature-item" *ngFor="let feature of features">
+      <i [class]="feature.icon + ' fs-1'"></i>
+      <h5 class="mt-3">{{ feature.title }}</h5>
+      <p>{{ feature.description }}</p>
+    </div>
+  </div>
+</section>

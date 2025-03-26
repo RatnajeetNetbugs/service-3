@@ -1,0 +1,82 @@
+/* ===== Features Section ===== */
+/* Center the Features Section */
+.features-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  min-height: 100vh; /* Take full height of the viewport */
+}
+
+/* Center the Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+  justify-content: center; /* Center grid items */
+  align-items: center; /* Align items properly */
+}
+
+/* Feature Card */
+.feature-item {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  height: 250px;
+  padding: 30px;
+
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+}
+
+/* Hover Effect */
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Feature Icon */
+.feature-item i {
+  font-size: 40px;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+/* Feature Title */
+.feature-item h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: var(--text-color); /* Fix text color */
+}
+
+/* Feature Description */
+.feature-item p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* 🔹 Dark Theme Fixes */
+.dark-theme .features-section {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ Ensure text inside feature-item is white */
+.dark-theme .feature-item {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Fix text color */
+.dark-theme .feature-item h5,
+.dark-theme .feature-item p,
+.dark-theme .feature-item i {
+  color: var(--text-color) !important;
+}
+
+/* Hover Effect */
+.dark-theme .feature-item:hover {
+  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,335 @@
+/* ===== Global Styling ===== */
+:root {
+  --primary-color: #6a5acd; /* Violet shade */
+  --secondary-color: #4a4a4a;
+  --light-bg: #ffffff;
+  --dark-bg: #2f3349;
+  --text-primary: #fff;
+  --text-secondary: #b0b0b0;
+  --border-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  color: var(--text-primary);
+  margin: 0;
+  padding: 20px;
+}
+
+/* ===== Container Layout ===== */
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+}
+
+.shopping-bag,
+.order-summary {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+
+  width: 48%;
+}
+
+/* ===== Offer Box ===== */
+.offer-box {
+  background: #228b22;
+  padding: 12px;
+  border-radius: 6px;
+  color: var(--text-primary);
+}
+
+.offer-box ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 14px;
+}
+
+/* ===== Product Items ===== */
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.product-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-item-details {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.product-item h4 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+  font-size: 14px;
+}
+
+.in-stock {
+  background: #228b22;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.rating {
+  font-size: 14px;
+  color: gold;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.discounted-price {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ===== Wishlist & Add More Products Button ===== */
+.wishlist-btn,
+.wishlist-add {
+  background: none;
+  border: 1px solid var(--primary-color);
+  padding: 8px 12px;
+  color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ===== Order Summary Section ===== */
+.promo-code {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.promo-code input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+
+  border: 1px solid rgba(180, 180, 180, 0.8); /* Thin grey border */
+
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.btn-apply {
+  background: #675cd6;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.price-details {
+  margin-top: 20px;
+}
+
+.price-details p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.price-highlight {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.free {
+  color: #32cd32;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ===== Place Order Button (No Hover & Proper Text Visibility) ===== */
+.buy-now {
+  background: #685dd8;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Make Checkout Responsive */
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column; /* Stack items */
+    gap: 15px;
+  }
+
+  .shopping-bag,
+  .order-summary {
+    width: 100%; /* Take full width */
+  }
+
+  /* Make Promo Code Section Responsive */
+  .promo-code {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .promo-code input {
+    width: 100%;
+  }
+
+  .btn-apply {
+    width: 100%;
+    text-align: center;
+  }
+}
+.payment-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.payment-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Center wrapper in the viewport */
+/* Center everything on the screen */
+.checkout-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Message styling */
+/* Center everything in the screen */
+.checkout-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Message Styling */
+/* Center everything on the screen */
+.checkout-wrapper {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Message Styling */
+.checkout-message {
+  border: 2px solid grey;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  max-width: 80%;
+  text-align: center;
+  margin-bottom: 30px; /* Space between message and progress bar */
+}
+
+/* Progress Bar Section */
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  position: relative;
+}
+
+/* Full Progress Bar */
+.progress-bar {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #ccc; /* Full gray bar visible */
+  top: 15px; /* Moves it behind the numbers */
+  z-index: -1;
+}
+
+/* Orange Fill (70% Progress) */
+.progress-fill {
+  width: 70%; /* Fills 70% of the bar */
+  height: 100%;
+  background: orange;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Steps (Circles + Labels) */
+.progress-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  text-align: center;
+  position: relative;
+}
+
+/* Step Number Circle */
+.progress-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: lightgray;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  position: relative;
+  z-index: 1; /* Ensures numbers are above progress bar */
+  margin-bottom: 5px; /* Space between number and text */
+}
+
+.progress-step.active {
+  background: #444;
+}
+
+/* Step Labels (Below Numbers) */
+.progress-steps span {
+  font-size: 14px;
+  margin-top: 5px;
+}

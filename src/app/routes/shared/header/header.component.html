@@ -1,0 +1,350 @@
+<!-- Navbar -->
+<nav
+  class="navbar navbar-expand-lg fixed-top shadow px-4"
+  [ngClass]="{
+    'bg-white text-dark': selectedTheme !== 'dark',
+    'bg-dark text-white': selectedTheme === 'dark'
+  }"
+>
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a
+      class="navbar-brand d-flex align-items-center fw-bold"
+      [routerLink]="'home'"
+    >
+      <img
+        src="img/logobzfc.svg"
+        alt="Logo"
+        width="100"
+        height="40"
+        class="me-2"
+        style="object-fit: contain"
+      />
+    </a>
+
+    <!-- Mobile Toggle Button -->
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#mobileMenu"
+    >
+      <span
+        class="navbar-toggler-icon"
+        [ngStyle]="{
+          filter: selectedTheme === 'dark' ? 'invert(1)' : 'invert(0)'
+        }"
+      ></span>
+    </button>
+
+    <!-- Desktop Nav -->
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav">
+        <li class="nav-item me-4">
+          <a class="nav-link" [ngClass]="themeTextColor" [routerLink]="'home'"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item me-4">
+          <a
+            class="nav-link"
+            [ngClass]="themeTextColor"
+            [routerLink]="'features'"
+            >Features</a
+          >
+        </li>
+        <li class="nav-item me-4">
+          <a class="nav-link" [ngClass]="themeTextColor" [routerLink]="'faqs'"
+            >Faqs</a
+          >
+        </li>
+
+        <!-- Pages Dropdown -->
+        <li class="nav-item dropdown me-4">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="pagesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            [ngClass]="themeTextColor"
+          >
+            Pages
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" [routerLink]="'pricing'">Pricing</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="'checkout'">Checkout</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="'payment'">Payment</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="'help'">Help Center</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item me-4">
+          <a
+            class="nav-link"
+            [ngClass]="themeTextColor"
+            [routerLink]="'contact'"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <!-- Theme Switcher & Cart Icon -->
+      <div class="d-flex align-items-center">
+        <!-- Theme Switcher Dropdown -->
+        <div class="dropdown me-3">
+          <button
+            class="btn dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            <i
+              class="bi"
+              [ngClass]="[
+                themeIcon,
+                selectedTheme === 'dark' ? 'text-white' : 'text-dark'
+              ]"
+            ></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" (click)="setTheme('light')">
+                <i class="bi bi-sun me-2 text-dark"></i> Light
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="setTheme('dark')">
+                <i class="bi bi-moon me-2 text-dark"></i> Dark
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="setTheme('system')">
+                <i class="bi bi-laptop me-2 text-dark"></i> System
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cart Icon -->
+        <a class="btn me-3 position-relative" [routerLink]="''">
+          <i
+            class="bi bi-cart"
+            (click)="cart.toggleCart()"
+            [ngClass]="{
+              'text-secondary': selectedTheme !== 'dark',
+              'text-white': selectedTheme === 'dark'
+            }"
+          ></i>
+        </a>
+
+        <!-- Login & Dashboard Buttons -->
+        <a
+          class="btn me-3"
+          [ngClass]="{
+            'btn-outline-dark': selectedTheme !== 'dark',
+            'btn-outline-light': selectedTheme === 'dark'
+          }"
+          [routerLink]="'login'"
+          >Login</a
+        >
+        <a
+          class="btn"
+          style="background-color: #685dd8; color: white"
+          [ngClass]="{
+            vio: selectedTheme !== 'dark',
+            'btn-light': selectedTheme === 'dark'
+          }"
+          [routerLink]="'dashboard'"
+          >Dashboard</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Sidebar -->
+<!-- Mobile Offcanvas Sidebar -->
+<div
+  class="offcanvas offcanvas-start"
+  [ngClass]="{
+    'bg-white text-dark': selectedTheme !== 'dark',
+    'bg-dark text-white': selectedTheme === 'dark'
+  }"
+  tabindex="-1"
+  id="mobileMenu"
+>
+  <div class="offcanvas-header">
+    <a
+      class="navbar-brand d-flex align-items-center fw-bold"
+      [routerLink]="'home'"
+    >
+      <img
+        src="img/netbugslogo.png"
+        alt="Logo"
+        width="60"
+        height="60"
+        class="me-2"
+        style="object-fit: contain"
+      />
+    </a>
+    <button
+      type="button"
+      [ngClass]="{
+        'bg-white text-dark': themeTextColor !== 'dark',
+        'bg-dark text-white': themeTextColor === 'dark'
+      }"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item mb-3">
+        <a
+          class="nav-link"
+          [ngClass]="themeTextColor"
+          [routerLink]="'home'"
+          data-bs-dismiss="offcanvas"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item mb-3">
+        <a
+          class="nav-link"
+          [ngClass]="themeTextColor"
+          [routerLink]="'features'"
+          data-bs-dismiss="offcanvas"
+          >Features</a
+        >
+      </li>
+      <li class="nav-item mb-3">
+        <a
+          class="nav-link"
+          [ngClass]="themeTextColor"
+          [routerLink]="'faqs'"
+          data-bs-dismiss="offcanvas"
+          >FAQ</a
+        >
+      </li>
+
+      <!-- Pages Dropdown -->
+      <li class="nav-item dropdown me-4">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="pagesDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          [ngClass]="themeTextColor"
+        >
+          Pages
+        </a>
+        <ul class="dropdown-menu" data-bs-dismiss="offcanvas">
+          <li>
+            <a class="dropdown-item" [routerLink]="'pricing'">Pricing</a>
+          </li>
+          <li>
+            <a class="dropdown-item" [routerLink]="'checkout'">Checkout</a>
+          </li>
+          <li>
+            <a class="dropdown-item" [routerLink]="'payment'">Payment</a>
+          </li>
+          <li>
+            <a class="dropdown-item" [routerLink]="'help'">Help Center</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item me-4">
+        <a
+          class="nav-link"
+          data-bs-dismiss="offcanvas"
+          [ngClass]="themeTextColor"
+          [routerLink]="'contact'"
+          >Contact</a
+        >
+      </li>
+    </ul>
+
+    <!-- Theme Switcher & Cart Icon -->
+    <div class="d-flex align-items-center mt-3">
+      <!-- Theme Switcher -->
+      <div class="dropdown me-3">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+        >
+          <i
+            class="bi"
+            data-bs-dismiss="offcanvas"
+            [ngClass]="[
+              themeIcon,
+              selectedTheme === 'dark' ? 'text-white' : 'text-secondary'
+            ]"
+          ></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" (click)="setTheme('light')">
+              <i class="bi bi-sun me-2 text-dark"></i> Light
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="setTheme('dark')">
+              <i class="bi bi-moon me-2 text-dark"></i> Dark
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="setTheme('system')">
+              <i class="bi bi-laptop me-2 text-dark"></i> System
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Cart Icon -->
+      <a
+        class="btn me-3 position-relative"
+        data-bs-dismiss="offcanvas"
+        [routerLink]="''"
+      >
+        <i
+          class="bi bi-cart"
+          (click)="cart.toggleCart()"
+          [ngClass]="{
+            'text-secondary': selectedTheme !== 'dark',
+            'text-white': selectedTheme == 'dark',
+          }"
+        ></i>
+      </a>
+    </div>
+
+    <!-- Login and Upgrade Buttons -->
+    <div class="d-flex flex-column align-items-center mt-4">
+      <a
+        class="btn btn-login"
+        [routerLink]="'login'"
+        data-bs-dismiss="offcanvas"
+        >Login</a
+      >
+      <a
+        class="btn btn-upgrade"
+        [routerLink]="'upgrade'"
+        data-bs-dismiss="offcanvas"
+        >Upgrade</a
+      >
+    </div>
+  </div>
+</div>
+<app-cart #cart></app-cart>

@@ -1,0 +1,168 @@
+/* Navbar with Margin */
+.navbar {
+  width: auto;
+  margin: 20px 100px;
+  border: 2px rgb(236, 239, 243);
+  border-radius: 3px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+
+  padding: 10px 20px;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+  min-width: 200px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #23243c;
+  color: white;
+}
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.form-select {
+  border: none !important;
+  box-shadow: none !important; /* Removes any default focus shadow */
+}
+
+/* Light Theme: Hover Effect */
+.navbar-nav .nav-link:hover {
+  color: #6a0dad !important;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Dark Theme: Hover Effect */
+body.bg-dark .navbar-nav .nav-link:hover {
+  color: #ffcc00 !important; /* Change hover color for dark mode */
+}
+
+/* Dropdown & Button Hover */
+.dropdown-item:hover {
+  background-color: rgba(108, 99, 255, 0.2) !important;
+  color: #6c63ff !important;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  /* Adjust navbar layout for mobile */
+  .navbar {
+    padding: 20px 20px;
+    margin: 0;
+    height: 90px; /* Increased navbar height */
+  }
+
+  /* Align logo to the left */
+  .navbar-brand {
+    position: absolute;
+    left: 20px;
+    top: 20px; /* Added some top margin for the logo */
+    transform: translateY(0); /* Remove vertical transform */
+  }
+
+  /* Align hamburger to the right */
+  .navbar-toggler {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transform: translateY(0); /* Remove vertical transform */
+  }
+
+  /* Make navbar items hidden initially */
+  .navbar-collapse {
+    display: none; /* Hide navbar items by default on mobile */
+  }
+
+  /* Show overlay when hamburger is clicked */
+  .offcanvas {
+    width: 50%; /* Limit overlay width to 50% */
+    left: 0; /* Overlay from the left */
+    background-color: #fff; /* White background for the overlay */
+    height: 100vh; /* Full height overlay */
+  }
+
+  .offcanvas-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: var(
+      --primary-color
+    ); /* Set background color for header */
+  }
+
+  .offcanvas-body {
+    padding-top: 50px;
+    padding-bottom: 50px; /* Added bottom padding */
+    overflow-y: auto; /* Allow scrolling for long lists */
+  }
+
+  /* Mobile offcanvas items centered */
+  .offcanvas-body .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    margin-top: 5px; /* Add some margin at the top of the items */
+  }
+
+  .offcanvas-body .nav-item {
+    margin-bottom: 5px;
+  }
+
+  /* Ensure the menu is fully visible in overlay */
+  .offcanvas-body .nav-link {
+    color: var(--text-color);
+    text-align: left; /* Align text to the left */
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Make dropdown menu items also full width */
+  .dropdown-menu {
+    width: 100%;
+  }
+
+  /* Customize the close button */
+  .btn-close {
+    color: white;
+  }
+
+  /* Add some padding and space between items in the overlay */
+  .offcanvas-body .navbar-nav .nav-link {
+    padding: 12px 20px;
+  }
+
+  /* Add padding to the login and upgrade buttons */
+  .offcanvas-body .btn {
+    margin-top: 5px;
+    width: 80%;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* Specific styling for buttons */
+  .btn-login {
+    background-color: #6a0dad;
+    color: white;
+  }
+
+  .btn-upgrade {
+    background-color: #6a0dad;
+    color: white;
+  }
+}
+
+#cart {
+  width: 280px;
+  height: auto;
+  z-index: 3000;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+body.bg-dark {
+  background-color: #2f3349 !important; /* Dark mode background */
+  color: white !important;
+}
+
+body.bg-light {
+  background-color: #ffffff !important; /* Light mode background */
+  color: black !important;
+}
+/* common styling */
+.dark-theme .cart-container {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
